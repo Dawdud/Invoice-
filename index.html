@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FakturaVat</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <style>
+        .NoError
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div id="ipt-number">
+        <label for="number">Numer faktury: </label>
+        <input type="text" id="number" placeholder="numer faktury">
+    </div>
+    <div>
+        <label for="Name">Nazwa Firmy: </label>
+        <input type="text" id="Name" placeholder="Nazwa Firmy">
+    </div>
+    <div>
+        <label for="Adress">Adres Firmy: </label>
+        <input type="text" id="Adress" placeholder="Adress firmy ">
+    </div>
+    <div>
+        <label for="Postal">Kod pocztowy: </label>
+        <input type="text" id="Postal" placeholder="Kod Pocztowy ">
+    </div>
+    <div>
+        <label for="NIP">NIP: </label>
+        <input type="text" id="NIP" placeholder="NIP">
+    </div>
+    <div>
+        <label for="REGON">REGON: </label>
+        <input type="text" id="REGON" placeholder="REGON">
+    </div>
+    <input id="btn" type="button"  value="Submit">
+</form>
+
+<div id="content">
+
+</div>
+<a href="javascript:demoFromHTML()" class="button">Run Code</a>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="js/src.js"></script>
+</body>
+</html>
