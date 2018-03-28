@@ -73,7 +73,7 @@ Input.prototype.removeElement= function()
 
     if(this.er>0 && edv!==undefined)
     {
-        for(let x=0; x<edv.length; x++) {
+        for(var x=0; x<edv.length; x++) {
 
 
             edv[x].style.display = "none";
@@ -97,9 +97,11 @@ this.button.addEventListener('click',function(){
 
 };
 
-var namesv= new Input({name: ['number','Name'],
-    ErrorMsg:["To pole  przyjmuje tylko liczby i ukośnik ",""],
-    regexp:["^[\\d/]+$",""]});
+var namesv= new Input({name: ['number','Name','Adress',"Postal", "NIP","REGON"],
+    ErrorMsg:["To pole  przyjmuje tylko liczby i ukośnik ",""
+        ,"",
+        "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"],
+    regexp:["^[\\d/]+$","","","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
 
 namesv.display()
 })(jQuery);

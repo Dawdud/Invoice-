@@ -20,13 +20,14 @@ function demoFromHTML()
         margins.top,
         {'width': margins.width,
         'elementHandlers': specialElementHandlers},
-        function (dispose){
+        function (){
             pdf.save('Test.pdf');
         },
         margins
     );
 
 }
+
 (function () {
 
 
@@ -39,29 +40,53 @@ function Input(el)
 Input.prototype.shownumber= function()
 {
     for(var i=0; i<this.el.name.length; i++) {
-        var show = document.getElementById(this.el.name[i]);
-        var reg = new RegExp(this.el.regexp[i]);
-        if (reg.test(show.value)) {
-            show.style.border= "1px solid #6D6A7A";
+        var show = document.getElementsByClassName(this.el.name[i]);
+        for (let j = 0; j < show.length; j++) {
 
-        }
-        else {
-            this.displayError(show,this.el.ErrorMsg[i]);
-            this.er++;
+
+            var reg = new RegExp(this.el.regexp[i]);
+            if (reg.test(show[j].value)) {
+
+                if(show[j].classList.contains('ErrorClass'))
+                {
+                    show[j].classList.remove('ErrorClass');
+
+
+
+
+                }
+                var content=document.getElementById('content');
+                if(this.er===0) {
+
+
+                    this.addNode(content, show[j].value);
+                }
+
+            }
+
+            else {
+
+                this.displayError(show[j],this.el.ErrorMsg[i]);
+                this.er++;
+            }
+
+
         }
     }
-
 };
 Input.prototype.displayError= function(name, error)
     {
 
-      name.style.border= "1px solid #C90B07";
-      var div= document.getElementById("ipt-"+name.id);
+
+      name.className+='  ErrorClass';
+      document.getElementById("content").innerHTML="";
       var errordiv= document.createElement("div");
       errordiv.classList.add("ErrorDiv");
       errordiv.innerHTML="<h3>"+error+"</h3>";
-      div.insertBefore(errordiv,name[0]);
-      console.log(this.er);
+
+
+
+
 
 
 
@@ -90,16 +115,26 @@ this.button= document.getElementById('btn');
 this.button.addEventListener('click',function(){
     that.removeElement();
     that.shownumber();
-
+    console.log(that.er);
+    that.er=0;
 
 
 }, false)
 
 };
+Input.prototype.addNode= function(parrent,value)
+{
+    var para= document.createElement("p");
+    var node = document.createTextNode(value);
+    para.appendChild(node);
+    parrent.appendChild(para);
+};
 
-var namesv= new Input({name: ['number','Name'],
-    ErrorMsg:["To pole  przyjmuje tylko liczby i ukośnik ",""],
-    regexp:["^[\\d/]+$",""]});
+var namesv= new Input({name: ['number','Name','Adress',"Postal", "NIP","REGON"],
+    ErrorMsg:["",""
+        ,"",
+        "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"],
+    regexp:["","","","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
 
 namesv.display()
 })(jQuery);
