@@ -5,6 +5,9 @@
     <title>FakturaVat</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <style>
         .NoError
         {
@@ -17,13 +20,18 @@
     </style>
 </head>
 <body>
-<form>
+<form >
     <div id="ipt-number">
 
         <label >Numer faktury:
             <input type="text" class="number" placeholder="numer faktury">
         </label>
 
+    </div>
+    <div id="ipt-date">
+      <label> Data wystawienia
+        <input type="text" class="date">
+      </label>
     </div>
     <div id="ipt-Name">
 
@@ -85,10 +93,7 @@
 
 </div>
 
-<script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+
 <script src="js/src.js"></script>
 </body>
 </html>

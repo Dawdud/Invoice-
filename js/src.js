@@ -1,3 +1,4 @@
+//generate pdf from "content" div
 function demoFromHTML()
 {
     var pdf= new jsPDF('p', 'pt', 'letter');
@@ -30,11 +31,32 @@ function demoFromHTML()
 
 (function () {
 
+function currentDate()
+{
+var today= new Date();
+var dd= today.getDate;
+var mm= today.getMonth()+1;
+var yyyy= today.getFullYear();
+if(dd<10)
+{
+  dd='0'+dd;
+}
+if(mm<10)
+{
+  mm='0'+mm;
+}
+today=dd+'-'+dd+'-'+yyyy;
+$('.date').datepicker({ dateFormat: 'dd-mm-yy' });
+$('.date').attr('value',today.toString());
+}
 
-function Input(el)
+function Input(el,length)
 {
     this.el=el;
     this.er=0;
+    this.create_node=0;
+    this.elementLength=length;
+    this.inputs= document.getElementsByTagName('input');
 
 }
 Input.prototype.shownumber= function()
@@ -58,8 +80,14 @@ Input.prototype.shownumber= function()
                 var content=document.getElementById('content');
                 if(this.er===0) {
 
+                  if(this.create_node<this.inputs.length-1)
+                  {
+
 
                     this.addNode(content, show[j].value);
+                  }
+                  this.create_node++;
+
                 }
 
             }
@@ -77,7 +105,7 @@ Input.prototype.shownumber= function()
 Input.prototype.displayError= function(name, error)
     {
 
-
+      //TODO this is not finishedS
       name.className+='  ErrorClass';
       document.getElementById("content").innerHTML="";
       var errordiv= document.createElement("div");
@@ -119,6 +147,7 @@ this.button.addEventListener('click',function(){
     that.er=0;
 
 
+
 }, false)
 
 };
@@ -131,12 +160,11 @@ Input.prototype.addNode= function(parrent,value)
 };
 
 var namesv= new Input({name: ['number','Name','Adress',"Postal", "NIP","REGON"],
-    ErrorMsg:["",""
+    ErrorMsg:["","",
         ,"",
         "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"],
     regexp:["","","","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
 
-namesv.display()
+namesv.display();
+currentDate();
 })(jQuery);
-
-
