@@ -29,9 +29,13 @@
 
     </div>
     <div id="ipt-date">
-      <label> Data wystawienia
+      <label> Data wystawienia:
         <input type="text" class="date">
       </label>
+        <label>
+            Data sprzedaży:
+            <input type="text" class="date">
+        </label>
     </div>
     <div id="ipt-Name">
 
@@ -86,9 +90,65 @@
              <input type="text" class="REGON" placeholder="REGON">
         </label>
     </div>
+    <div id="ipt-table">
+        <table>
+            <tr>
+                <th>Towar lub usługa</th>
+                <th>Jm.</th>
+                <th>ilość</th>
+                <th>cena netto</th>
+                <th>wartość netto</th>
+                <th>stawka VAT</th>
+                <th>kwota VAT</th>
+                <th>wartość brutto</th>
+                <th>rabat</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="services" ></td>
+                <td> <select name="jm" class="jm" >
+                    <option>usł</option>
+                    <option>szt.</option>
+                    <option></option>
+                    <option>min</option>
+                    <option>gr</option>
+                    <option>kg</option>
+                    <option>h</option>
+                    <option>kW</option>
+                    <option>kwH</option>
+                </select> </td>
+                <td><input type="text"  class="number-form" id="amount" value="1"></td>
+                <td><input type="text" class="number-form" id="netto-price" value="0.00"></td>
+                <td><input type="text" class="number-form" id="netto-worth" value="0.00"></td>
+                <td><select name="jm"   id="VAT-rate" >
+                    <option>0%</option>
+                    <option>3%</option>
+                    <option>5%</option>
+                    <option>7%</option>
+                    <option>7.7%</option>
+                    <option>8%</option>
+                    <option>9%</option>
+                    <option>15%</option>
+                    <option>19%</option>
+                    <option>20%</option>
+                    <option>21%</option>
+                    <option>22%</option>
+                    <option>23%</option>
+                    <option>24%</option>
+                    <option>25%</option>
+                </select></td>
+                <td><input type="text"  class="number-form" id="amount-vat" value="0.00"></td>
+                <td><input type="text"  class="number-form" id="brutto-worth" value="0.00"></td>
+                <td><input type="text"  class="number-form" id="rabat" value="0.00"></td>
+                <td> <input id="btn-table" type="button"  value="+"></td>
+            </tr>
+
+        </table>
+    </div>
     <input id="btn" type="button"  value="Submit">
 </form>
 <a href="javascript:demoFromHTML()" class="button">Run Code</a>
+
+
 <div id="content">
 
 </div>
