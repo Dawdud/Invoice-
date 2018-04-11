@@ -1,33 +1,29 @@
-//generate pdf from "content" div
+
+
 function demoFromHTML()
 {
-    var pdf= new jsPDF('p', 'pt', 'letter');
-    source= $('#content')[0];
-    specialElementHandlers={
-        '#bypassme':function(element,renderer)
-        {
-            return true
-        }
+    html2canvas(document.querySelector("#content")).then(function(canvas) {
+        document.body.appendChild(canvas);
+    });
+
+
+    var pdf= new jsPDF('p', 'pt', 'a4');
+    pdfConf = {
+        pagesplit: false, //Adding page breaks manually using pdf.addPage();
+        background: '#fff' //White Background.
     };
-    margins={
-        top: 80,
-        bottom:60,
-        left: 40,
-        width: 522
-    };
-    pdf.fromHTML(
-        source,
-        margins.left,
-        margins.top,
-        {'width': margins.width,
-        'elementHandlers': specialElementHandlers},
-        function (){
-            pdf.save('Test.pdf');
-        },
-        margins
-    );
+
+    pdf.addHTML(document.body,function() {
+        pdf.output('datauri');
+    });
+
+
 
 }
+
+
+
+
 
 (function () {
 
@@ -167,17 +163,57 @@ Input.prototype.calcVat=function()
 Input.prototype.createTable= function()
 {
 
-    this.tblbtn= document.getElementById('btn-table');
-    this.tblbtn.addEventListener('click', function(){
+    this.tblbtn= document.getElementById('ipt-table');
+    this.tblbtn.addEventListener('click', function(e){
+        if(e.target && e.target.id=='btn-table') {
 
-       var tablediv= document.getElementById('ipt-table');
-       var table=  document.getElementsByTagName('table')[0];
-       var clone= table.cloneNode(true);
-       tablediv.appendChild(clone);
-       console.log(tablediv);
+
+            var tablediv = document.getElementById('ipt-table');
+            var table = document.getElementsByTagName('table')[0];
+            var clone = table.cloneNode(true);
+            tablediv.appendChild(clone);
+            console.log(tablediv);
+        }
     });
 
 };
+Input.prototype.createContentTable= function()
+{
+    var contentbl= document.getElementsByTagName('table')[0];
+    var theaders= contentbl.rows[0].cells;
+    var tdata= contentbl.rows[1].cells;
+    var tbody=  document.createElement('tbody');
+
+    var table = document.createElement('table');
+    for (var i = 0; i < 1; i++){
+        var trh = document.createElement('tr');
+        var trd= document.createElement('tr');
+        for(var j=0; j<contentbl.rows[0].cells.length; j++) {
+
+            var td=  document.createElement('td');
+            var th = document.createElement('th');
+
+
+
+            var text1 = document.createTextNode(theaders[j].innerHTML);
+            var text2 = document.createTextNode(tdata[j].firstChild.value);
+
+
+            th.appendChild(text1);
+            td.appendChild(text2);
+            trh.appendChild(th);
+            trd.appendChild(td);
+        }
+
+
+        tbody.appendChild(trh);
+        tbody.appendChild(trd);
+        table.appendChild(tbody);
+    }
+    document.getElementById('content').appendChild(table);
+
+};
+
 Input.prototype.display= function()
 {
 var that= this;
@@ -185,7 +221,8 @@ this.button= document.getElementById('btn');
 this.button.addEventListener('click',function(){
     that.removeElement();
     that.shownumber();
-    console.log(that.er);
+    that.createContentTable();
+
     that.er=0;
 
 
