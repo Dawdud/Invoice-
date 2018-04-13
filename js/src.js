@@ -2,22 +2,19 @@
 
 function demoFromHTML()
 {
+
     html2canvas(document.querySelector("#content")).then(function(canvas) {
+
         document.body.appendChild(canvas);
+        var pdf = new jsPDF('p', 'pt', 'a4');
+        var  pdfConf = {
+            background: '#fff'
+        };
+
+        pdf.addHTML(document.getElementById('content'),pdfConf, function() {
+            pdf.save('web.pdf');
+        });
     });
-
-
-    var pdf= new jsPDF('p', 'pt', 'a4');
-    pdfConf = {
-        pagesplit: false, //Adding page breaks manually using pdf.addPage();
-        background: '#fff' //White Background.
-    };
-
-    pdf.addHTML(document.body,function() {
-        pdf.output('datauri');
-    });
-
-
 
 }
 
@@ -47,6 +44,7 @@ $('.date').datepicker({ dateFormat: 'dd-mm-yy' });
 $('.date').attr('value',today);
 }
 
+
 function Input(el,length)
 {
     this.el=el;
@@ -55,14 +53,19 @@ function Input(el,length)
     this.inputs= document.getElementsByTagName('input');
 
 }
+
 Input.prototype.shownumber= function()
 {
     for(var i=0; i<this.el.name.length; i++) {
         var show = document.getElementsByClassName(this.el.name[i]);
-        for (let j = 0; j < show.length; j++) {
+
+
+
+        for (let j = 0; j <= show.length-1; j++) {
 
 
             var reg = new RegExp(this.el.regexp[i]);
+
             if (reg.test(show[j].value)) {
 
                 if(show[j].classList.contains('ErrorClass'))
@@ -80,7 +83,11 @@ Input.prototype.shownumber= function()
                   {
 
 
-                    this.addNode(content, show[j].value);
+
+                        let idname= document.getElementsByClassName(this.el.name[i])[j].id;
+                        this.addNode(content, show[j].value, idname);
+
+
                   }
                   this.create_node++;
 
@@ -230,19 +237,20 @@ this.button.addEventListener('click',function(){
 }, false)
 
 };
-Input.prototype.addNode= function(parrent,value)
+Input.prototype.addNode= function(parrent,value, id)
 {
     var para= document.createElement("p");
-    var node = document.createTextNode(value);
+    var node = document.createTextNode(id+": "+value);
+
     para.appendChild(node);
     parrent.appendChild(para);
 };
 
-var namesv= new Input({name: ['number','Name','Adress',"Postal", "NIP","REGON"],
-    ErrorMsg:["","",
+var namesv= new Input({name: ['Name','Adress',"Postal", "NIP","REGON"],
+    ErrorMsg:["",
         ,"",
         "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"],
-    regexp:["","","","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
+    regexp:["","","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
 
 namesv.calcVat();
 namesv.createTable();

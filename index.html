@@ -5,95 +5,83 @@
     <title>FakturaVat</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
     <script src="js/html2canvas.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <style>
-        .NoError
-        {
-            display: none;
-        }
-        .ErrorClass
-        {
-            border: 2px solid red;
-        }
-        #content p
-        {
-            text-align: center;
-        }
-    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <form >
     <div id="ipt-number">
 
         <label >Numer faktury:
-            <input type="text" class="number" placeholder="numer faktury">
+            <input type="text" class="number" id="nr-Faktury" placeholder="numer faktury">
         </label>
 
     </div>
     <div id="ipt-date">
       <label> Data wystawienia:
-        <input type="text" class="date">
+        <input type="text" class="date" id="data-wystawienia">
       </label>
         <label>
             Data sprzedaży:
-            <input type="text" class="date">
+            <input type="text" class="date" id="data-sprzedaży">
         </label>
     </div>
     <div id="ipt-Name">
 
         <label  >Sprzedawca:
-            <input type="text" class="Name" placeholder="Nazwa Firmy">
+            <input type="text" class="Name" id="sprzedawca" placeholder="Nazwa Firmy">
         </label>
 
 
 
         <label >Kontrahent:
-            <input type="text" class="Name" placeholder="Nazwa Firmy">
+            <input type="text" class="Name" id="Kontrahent" placeholder="Nazwa Firmy">
         </label>
 
     </div>
     <div id="ipt-Adress">
 
         <label class="l-Adress">Adres sprzedawcy:
-            <input class="Adress" type="text" placeholder="Adress sprzedawcy ">
+            <input class="Adress" id="adres-sprzedawcy" type="text" placeholder="Adress sprzedawcy ">
         </label>
 
         <label class="l-Adress">Adres Kontrahenta:
-             <input class="Adress" type="text"  placeholder="Adress kontrahenta ">
+             <input class="Adress" id="adres-kontrahenta" type="text"  placeholder="Adress kontrahenta ">
         </label>
 
     </div>
     <div id="ipt-Postal">
         <label class="l-Postal">Kod pocztowy sprzedawcy:
-            <input type="text" class="Postal" placeholder="Kod Pocztowy ">
+            <input type="text" class="Postal" id="poczta-sprzedawcy"  placeholder="Kod Pocztowy ">
         </label>
 
 
         <label class="l-Postal" >Kod pocztowy:
-             <input type="text" class="Postal" placeholder="Kod Pocztowy ">
+             <input type="text" class="Postal" id="poczta-kontrahenta" placeholder="Kod Pocztowy ">
         </label>
 
     </div>
     <div id="ipt-NIP">
         <label class="l-NIP" >NIP Sprzedawcy:
-             <input type="text" class="NIP" placeholder="NIP">
+             <input type="text" class="NIP" id="nip-sprzedawcy" placeholder="NIP">
         </label>
 
         <label class="l-NIP">NIP kontrahenta:
-                <input type="text" class="NIP" placeholder="NIP">
+                <input type="text" class="NIP" id="nip-kontrahenta" placeholder="NIP">
         </label>
     </div>
     <div id="ipt-REGON">
         <label  class="l-REGON">REGON Sprzedawcy:
-             <input type="text" class="REGON" placeholder="REGON">
+             <input type="text" class="REGON" id="regon-sprzedawcy" placeholder="REGON">
         </label>
 
         <label class="l-REGON" >REGON kontrahenta:
-             <input type="text" class="REGON" placeholder="REGON">
+             <input type="text" class="REGON" id="regon kontrahenta" placeholder="REGON">
         </label>
     </div>
     <div id="ipt-table">
