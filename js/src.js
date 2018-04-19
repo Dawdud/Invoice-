@@ -55,10 +55,21 @@ function Input(el,length)
 }
 Input.prototype.getDomElement= function()
 {
-    for(var i=0; i<this.el.name.length; i++) {
+
+    for(var i=0; i<this.el.array.length; i++) {
         var show = document.getElementsByClassName(this.el.array[i].name);
         for (let j = 0; j <= show.length-1; j++) {
-            this.shownumber(show[j], i,j);
+
+            if(("name" in this.el.array[i]))
+            {
+                console.log("plus")
+            }
+            if("regexp" in this.el.array[i]) {
+                this.shownumber(show[j], i, j);
+            }
+
+
+
         }
 
     }
@@ -68,7 +79,7 @@ Input.prototype.getDomElement= function()
 Input.prototype.shownumber= function(val,i,j)
 {
 
-            var reg = new RegExp(this.el.regexp[i]);
+            var reg = new RegExp(this.el.array[i].regexp);
 
             if (reg.test(val.value)) {
 
@@ -259,11 +270,11 @@ Input.prototype.addNode= function(parrent,value, id)
     parrent.appendChild(para);
 };
 
-var namesv= new Input({array: [{name:"", regexp:""},{name:"Postal", regexp:"\\d{2}-\\d{3}"}, {name:"NIP", regexp:"^[0-9]{10}$"},{name:"REGON", regexp:"^[0-9]{9}$"}],
+var namesv= new Input({array: [{name:""},{name:""},{name:""},{name:"Postal", regexp:"\\d{2}-\\d{3}"}, {name:"NIP", regexp:"^[0-9]{10}$"},{name:"REGON", regexp:"^[0-9]{9}$"}],
     ErrorMsg:[
 
-        "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"],
-    regexp:["","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
+        "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"]
+    });
 
 namesv.calcVat();
 namesv.createTable();

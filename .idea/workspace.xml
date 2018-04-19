@@ -4,6 +4,87 @@
     <list id="51fbacd7-e1e6-4598-bdcf-4e78a0825002" name="New changelist (2)" comment="" />
     <list id="8f63a023-a267-4577-8b93-8d09d694bb45" name="New changelist" comment="" />
     <list default="true" id="a0ac6256-6aa9-4610-b0b0-1a2ad28c8794" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/js/html2canvas.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/base64-arraybuffer/.npmignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/base64-arraybuffer/.travis.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/base64-arraybuffer/LICENSE-MIT" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/base64-arraybuffer/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/base64-arraybuffer/lib/base64-arraybuffer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/base64-arraybuffer/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/.flowconfig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/dist/LineBreak.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/dist/Trie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/dist/TrieBuilder.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/dist/Util.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/dist/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/dist/linebreak-trie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/css-line-break/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/.flowconfig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/CHANGELOG.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/RefTestRenderer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/html2canvas.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/html2canvas.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Angle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Bounds.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Clone.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Color.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Feature.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Font.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Gradient.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Input.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Length.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/ListItem.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Logger.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/NodeContainer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/NodeParser.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Proxy.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/PseudoNodeContent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Renderer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/ResourceLoader.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/StackingContext.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/TextBounds.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/TextContainer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Unicode.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Util.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/Window.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/drawing/BezierCurve.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/drawing/Circle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/drawing/Path.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/drawing/Size.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/drawing/Vector.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/background.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/border.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/borderRadius.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/display.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/float.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/font.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/letterSpacing.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/lineBreak.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/listStyle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/margin.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/overflow.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/overflowWrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/padding.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/position.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/textDecoration.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/textShadow.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/textTransform.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/transform.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/visibility.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/word-break.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/parsing/zIndex.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/renderer/CanvasRenderer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/renderer/ForeignObjectRenderer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/dist/npm/renderer/RefTestRenderer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/flow-typed/myLibDef.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/html2canvas/package.json" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/js/src.js" afterPath="$PROJECT_DIR$/js/src.js" />
     </list>
@@ -62,8 +143,8 @@
       <file leaf-file-name="src.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/src.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="265" column="5" lean-forward="false" selection-start-line="265" selection-start-column="5" selection-end-line="265" selection-end-column="5" />
+            <state relative-caret-position="108">
+              <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -274,7 +355,7 @@
       <workItem from="1523600163640" duration="106000" />
       <workItem from="1523604132940" duration="24000" />
       <workItem from="1524086687188" duration="6527000" />
-      <workItem from="1524129839482" duration="1123000" />
+      <workItem from="1524129839482" duration="2794000" />
     </task>
     <task id="LOCAL-00001" summary="refactor displayError method and  add new addNode method">
       <created>1522793619577</created>
@@ -297,16 +378,23 @@
       <option name="project" value="LOCAL" />
       <updated>1523600253547</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor show function and add getDomElementDom">
+      <created>1524130963048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524130963048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117671000" />
+    <option name="totallyTimeSpent" value="119342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="192" y="62" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1874317" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1874317" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -337,7 +425,8 @@
     <MESSAGE value="add html2canvas lib and change html2pdf method" />
     <MESSAGE value="add pdf from canvas" />
     <MESSAGE value="refactor show function and add getDomElementDom" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor show function and add getDomElementDom" />
+    <MESSAGE value="add exception to GetElementDom" />
+    <option name="LAST_COMMIT_MESSAGE" value="add exception to GetElementDom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -773,8 +862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/src.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="265" column="5" lean-forward="false" selection-start-line="265" selection-start-column="5" selection-end-line="265" selection-end-column="5" />
+        <state relative-caret-position="108">
+          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
           <folding />
         </state>
       </provider>
