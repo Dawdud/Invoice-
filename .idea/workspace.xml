@@ -5,8 +5,6 @@
     <list id="8f63a023-a267-4577-8b93-8d09d694bb45" name="New changelist" comment="" />
     <list default="true" id="a0ac6256-6aa9-4610-b0b0-1a2ad28c8794" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change beforePath="$PROJECT_DIR$/js/src.js" afterPath="$PROJECT_DIR$/js/src.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -51,24 +49,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="src.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/src.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="html2canvas.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/html2canvas.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="117756">
               <caret line="6496" column="54" lean-forward="false" selection-start-line="6496" selection-start-column="42" selection-end-line="6496" selection-end-column="54" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="src.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/src.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="265" column="5" lean-forward="false" selection-start-line="265" selection-start-column="5" selection-end-line="265" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,23 +200,7 @@
             <path>
               <item name="fakturavat" type="b2602c69:ProjectViewProjectNode" />
               <item name="fakturavat" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fakturavat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fakturavat" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fakturavat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fakturavat" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fakturavat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fakturavat" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="html2canvas.js" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -291,7 +271,10 @@
       <workItem from="1523436174851" duration="311000" />
       <workItem from="1523540534073" duration="6619000" />
       <workItem from="1523567108371" duration="8216000" />
-      <workItem from="1523600163640" duration="24000" />
+      <workItem from="1523600163640" duration="106000" />
+      <workItem from="1523604132940" duration="24000" />
+      <workItem from="1524086687188" duration="6527000" />
+      <workItem from="1524129839482" duration="1123000" />
     </task>
     <task id="LOCAL-00001" summary="refactor displayError method and  add new addNode method">
       <created>1522793619577</created>
@@ -307,24 +290,30 @@
       <option name="project" value="LOCAL" />
       <updated>1523436399520</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add pdf from canvas">
+      <created>1523600253547</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523600253547</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109915000" />
+    <option name="totallyTimeSpent" value="117671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="192" y="62" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1874317" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36038962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36038962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -346,7 +335,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor displayError method and  add new addNode method" />
     <MESSAGE value="add html2canvas lib and change html2pdf method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add html2canvas lib and change html2pdf method" />
+    <MESSAGE value="add pdf from canvas" />
+    <MESSAGE value="refactor show function and add getDomElementDom" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor show function and add getDomElementDom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -738,24 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/html2canvas.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/html2canvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117756">
-          <caret line="6496" column="54" lean-forward="false" selection-start-line="6496" selection-start-column="42" selection-end-line="6496" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -774,6 +747,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/html2canvas.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/html2canvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117756">
+          <caret line="6496" column="54" lean-forward="false" selection-start-line="6496" selection-start-column="42" selection-end-line="6496" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1494">
@@ -784,8 +773,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/src.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="341">
+          <caret line="265" column="5" lean-forward="false" selection-start-line="265" selection-start-column="5" selection-end-line="265" selection-end-column="5" />
           <folding />
         </state>
       </provider>

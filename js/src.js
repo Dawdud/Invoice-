@@ -53,40 +53,37 @@ function Input(el,length)
     this.inputs= document.getElementsByTagName('input');
 
 }
-
-Input.prototype.shownumber= function()
+Input.prototype.getDomElement= function()
 {
     for(var i=0; i<this.el.name.length; i++) {
-        var show = document.getElementsByClassName(this.el.name[i]);
-
-
-
+        var show = document.getElementsByClassName(this.el.array[i].name);
         for (let j = 0; j <= show.length-1; j++) {
+            this.shownumber(show[j], i,j);
+        }
 
+    }
+
+};
+
+Input.prototype.shownumber= function(val,i,j)
+{
 
             var reg = new RegExp(this.el.regexp[i]);
 
-            if (reg.test(show[j].value)) {
+            if (reg.test(val.value)) {
 
-                if(show[j].classList.contains('ErrorClass'))
+                if(val.classList.contains('ErrorClass'))
                 {
-                    show[j].classList.remove('ErrorClass');
-
-
-
+                    val.classList.remove('ErrorClass');
 
                 }
-                var content=document.getElementById('content');
+
                 if(this.er===0) {
 
                   if(this.create_node<this.inputs.length-1)
                   {
-
-
-
-                        let idname= document.getElementsByClassName(this.el.name[i])[j].id;
-                        this.addNode(content, show[j].value, idname);
-
+                        let idname= document.getElementsByClassName(this.el.array[i].name)[j].id;
+                        this.addToListNode(val.value, idname);
 
                   }
                   this.create_node++;
@@ -97,18 +94,29 @@ Input.prototype.shownumber= function()
 
             else {
 
-                this.displayError(show[j],this.el.ErrorMsg[i]);
+                this.displayError(val,this.el.ErrorMsg[i]);
                 this.er++;
             }
 
 
-        }
-    }
 };
+
+Input.prototype.addToListNode= function(value, id)
+{
+    var newNodes= {};
+    var nodeList=[];
+    var content=document.getElementById('content');
+    newNodes.content= content;
+    newNodes.value= value;
+    newNodes.id= id;
+    nodeList.push(newNodes);
+
+};
+
 Input.prototype.displayError= function(name, error)
     {
 
-      //TODO this is not finishedS
+      //TODO this is not finished
       name.className+='  ErrorClass';
       document.getElementById("#content").innerHTML="";
       var errordiv= document.createElement("div");
@@ -226,8 +234,11 @@ Input.prototype.display= function()
 var that= this;
 this.button= document.getElementById('btn');
 this.button.addEventListener('click',function(){
+
+
     that.removeElement();
-    that.shownumber();
+    that.getDomElement();
+
     that.createContentTable();
 
     that.er=0;
@@ -240,17 +251,19 @@ this.button.addEventListener('click',function(){
 Input.prototype.addNode= function(parrent,value, id)
 {
     var para= document.createElement("p");
+
     var node = document.createTextNode(id+": "+value);
 
     para.appendChild(node);
+    para.setAttribute("id","canvas-"+id);
     parrent.appendChild(para);
 };
 
-var namesv= new Input({name: ['Name','Adress',"Postal", "NIP","REGON"],
-    ErrorMsg:["",
-        ,"",
+var namesv= new Input({array: [{name:"", regexp:""},{name:"Postal", regexp:"\\d{2}-\\d{3}"}, {name:"NIP", regexp:"^[0-9]{10}$"},{name:"REGON", regexp:"^[0-9]{9}$"}],
+    ErrorMsg:[
+
         "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"],
-    regexp:["","","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
+    regexp:["","\\d{2}-\\d{3}","^[0-9]{10}$", "^[0-9]{9}$"]});
 
 namesv.calcVat();
 namesv.createTable();
