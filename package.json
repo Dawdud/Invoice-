@@ -10,11 +10,14 @@
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.1",
     "grunt-sass": "^2.1.0"
   },
   "dependencies": {
-    "html2canvas": "^1.0.0-alpha.12"
+    "bootstrap": "^4.1.0",
+    "html2canvas": "^1.0.0-alpha.12",
+    "jquery": "^3.3.1"
   }
 }

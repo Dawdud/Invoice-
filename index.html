@@ -9,97 +9,154 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<form >
-    <div id="ipt-number">
+<div class="container">
+<div class="row">
+
+<form id="inf-form">
+
+    <div class="row">
+
+        <div class="col-lg-6">
+    <div id="ipt-number" class="form-group">
+
 
         <label >Numer faktury:
-            <input type="text" class="number" id="nr-Faktury" placeholder="numer faktury">
+
+            <input type="text" class="number form-control " id="nr-Faktury" placeholder="numer faktury">
+
         </label>
 
+
     </div>
-    <div id="ipt-date">
+        </div>
+    </div>
+    <div id="ipt-date " class="form-group">
+        <div class="row">
+        <div class=" col-lg-6">
       <label> Data wystawienia:
-        <input type="text" class="date" id="data-wystawienia">
+        <input type="text" class="date form-control" id="data-wystawienia">
       </label>
+        </div>
+
+
+        <div class="col-lg-6">
         <label>
             Data sprzedaży:
-            <input type="text" class="date" id="data-sprzedaży">
+            <input type="text" class="date form-control" id="data-sprzedaży">
         </label>
+        </div>
+        </div>
     </div>
-    <div id="ipt-Name">
-
+    <div id="ipt-Name" class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
         <label  >Sprzedawca:
-            <input type="text" class="Name" id="sprzedawca" placeholder="Nazwa Firmy">
+            <input type="text" class="Name form-control" id="sprzedawca" placeholder="Nazwa Firmy">
         </label>
+            </div>
 
 
-
+        <div class="col-lg-6">
         <label >Kontrahent:
-            <input type="text" class="Name" id="Kontrahent" placeholder="Nazwa Firmy">
+            <input type="text" class="Name form-control" id="Kontrahent" placeholder="Nazwa Firmy">
         </label>
-
+        </div>
+        </div>
     </div>
-    <div id="ipt-Adress">
-
+    <div id="ipt-Adress" class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
         <label class="l-Adress">Adres sprzedawcy:
-            <input class="Adress" id="adres-sprzedawcy" type="text" placeholder="Adress sprzedawcy ">
+            <input class="Adress form-control" id="adres-sprzedawcy" type="text" placeholder="Adress sprzedawcy ">
         </label>
+            </div>
 
+
+
+            <div class="col-lg-6">
         <label class="l-Adress">Adres Kontrahenta:
-             <input class="Adress" id="adres-kontrahenta" type="text"  placeholder="Adress kontrahenta ">
+             <input class="Adress form-control" id="adres-kontrahenta" type="text"  placeholder="Adress kontrahenta ">
         </label>
+            </div>
+        </div>
 
     </div>
-    <div id="ipt-Postal">
+    <div id="ipt-Postal" class="from-group">
+        <div class="row">
+            <div class="col-lg-6">
         <label class="l-Postal">Kod pocztowy sprzedawcy:
-            <input type="text" class="Postal" id="poczta-sprzedawcy"  placeholder="Kod Pocztowy ">
+            <input type="text" class="Postal form-control" id="poczta-sprzedawcy"  placeholder="Kod Pocztowy ">
         </label>
+            </div>
 
-
+        <div class="col-lg-6">
         <label class="l-Postal" >Kod pocztowy:
-             <input type="text" class="Postal" id="poczta-kontrahenta" placeholder="Kod Pocztowy ">
+             <input type="text" class="Postal form-control" id="poczta-kontrahenta" placeholder="Kod Pocztowy ">
         </label>
+        </div>
+        </div>
 
     </div>
-    <div id="ipt-NIP">
+    <div id="ipt-NIP" class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
         <label class="l-NIP" >NIP Sprzedawcy:
-             <input type="text" class="NIP" id="nip-sprzedawcy" placeholder="NIP">
+             <input type="text" class="NIP form-control" id="nip-sprzedawcy" placeholder="NIP">
         </label>
+            </div>
 
+
+            <div class="col-lg-6">
         <label class="l-NIP">NIP kontrahenta:
-                <input type="text" class="NIP" id="nip-kontrahenta" placeholder="NIP">
+                <input type="text" class="NIP form-control" id="nip-kontrahenta" placeholder="NIP">
         </label>
-    </div>
-    <div id="ipt-REGON">
-        <label  class="l-REGON">REGON Sprzedawcy:
-             <input type="text" class="REGON" id="regon-sprzedawcy" placeholder="REGON">
-        </label>
+            </div>
+        </div>
 
-        <label class="l-REGON" >REGON kontrahenta:
-             <input type="text" class="REGON" id="regon kontrahenta" placeholder="REGON">
-        </label>
     </div>
-    <div id="ipt-table">
-        <table>
-            <tr>
-                <th>Towar lub usługa</th>
-                <th>Jm.</th>
-                <th>ilość</th>
-                <th>cena netto</th>
-                <th>wartość netto</th>
-                <th>stawka VAT</th>
-                <th>kwota VAT</th>
-                <th>wartość brutto</th>
-                <th>rabat</th>
+    <div id="ipt-REGON" class="form-group">
+        <div class="row">
+            <div class="col-lg-6">
+        <label  class="l-REGON">REGON Sprzedawcy:
+             <input type="text" class="REGON form-control" id="regon-sprzedawcy" placeholder="REGON">
+        </label>
+            </div>
+
+        <div class="col-lg-6">
+        <label class="l-REGON" >REGON kontrahenta:
+             <input type="text" class="REGON form-control" id="regon kontrahenta" placeholder="REGON">
+        </label>
+        </div>
+        </div>
+
+    </div>
+</form>
+    <form>
+    <div id="ipt-table" >
+
+       <table class="table">
+
+            <tr class="table-secondary">
+                <th scope="col">Towar lub usługa</th>
+                <th scope="col">Jm.</th>
+                <th scope="col">ilość</th>
+                <th scope="col">cena netto</th>
+                <th scope="col">wartość netto</th>
+                <th scope="col">stawka VAT</th>
+                <th scope="col">kwota VAT</th>
+                <th scope="col">wartość brutto</th>
+                <th scope="col">rabat</th>
+                <th scope="col">dodaj tabelę</th>
             </tr>
             <tr>
-                <td><input type="text" class="services" ></td>
-                <td> <select name="jm" class="jm" >
+                <td><input type="text" class="services form-control" ></td>
+                <td> <select name="jm" class="jm form-control" >
                     <option>usł</option>
                     <option>szt.</option>
                     <option></option>
@@ -110,10 +167,10 @@
                     <option>kW</option>
                     <option>kwH</option>
                 </select> </td>
-                <td><input type="text"  class="number-form" id="amount" value="1"></td>
-                <td><input type="text" class="number-form" id="netto-price" value="0.00"></td>
-                <td><input type="text" class="number-form" id="netto-worth" value="0.00"></td>
-                <td><select name="jm"   id="VAT-rate" >
+                <td><input type="text"  class="number-form form-control" id="amount" value="1"></td>
+                <td><input type="text" class="number-form form-control" id="netto-price" value="0.00"></td>
+                <td><input type="text" class="number-form form-control" id="netto-worth" value="0.00"></td>
+                <td><select name="vat-rate"   class="form-control" id="VAT-rate" >
                     <option>0%</option>
                     <option>3%</option>
                     <option>5%</option>
@@ -130,24 +187,31 @@
                     <option>24%</option>
                     <option>25%</option>
                 </select></td>
-                <td><input type="text"  class="number-form" id="amount-vat" value="0.00"></td>
-                <td><input type="text"  class="number-form" id="brutto-worth" value="0.00"></td>
-                <td><input type="text"  class="number-form" id="rabat" value="0.00"></td>
-                <td> <input id="btn-table" type="button"  value="+"></td>
+                <td><input type="text"  class="number-form form-control" id="amount-vat" value="0.00"></td>
+                <td><input type="text"  class="number-form form-control" id="brutto-worth" value="0.00"></td>
+                <td><input type="text"  class="number-form form-control" id="rabat" value="0.00"></td>
+                <td> <input id="btn-table" class="btn btn-default" type="button"  value="+"></td>
             </tr>
 
         </table>
+
     </div>
-    <input id="btn" type="button"  value="Submit">
+    <input id="btn" type="button"  value="Submit" class="btn btn-primary">
 </form>
+</div>
+    </div>
 <a href="javascript:demoFromHTML()" class="button">Run Code</a>
 
 
 <div id="content">
 
 </div>
-
-
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="text/javascript">var jquery_3_3_1_slim_min=  $.noConflict(true); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script src="js/src.js"></script>
+<script src="//localhost:8003/livereload.js"></script>
 </body>
 </html>

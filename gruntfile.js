@@ -15,6 +15,9 @@ module.exports = function(grunt) {
             }
         },
         watch:{
+            options:{
+              livereload: 8003
+            },
             js:{
                 files: ['js/**/*.js'],
                 tasks: ['concat']
@@ -37,10 +40,21 @@ module.exports = function(grunt) {
 
 
         cssmin: {
-
+            options:{
+              mergeIntoShorthands: false,
+              roundingPrecision: -1
+            },
             target: {
+                files:{
+                    'css/style.min.css':['css/style.css']
+                }
+
+            }
+        },
+        sass: {
+            dist: {
                 files: {
-                    'css/main.min.css': ['css/main.css']
+                    'css/style.css': 'sass/main.scss'
                 }
             }
         }
@@ -48,10 +62,11 @@ module.exports = function(grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
-    grunt.registerTask('default', ['concat','watch','cssmin','uglify']);
+    grunt.registerTask('default', ['cssmin','concat','watch','uglify','sass']);
 
 };
