@@ -315,4 +315,25 @@ template {
 .services {
   width: 250px; }
 
+#content {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column; }
+  #content #inf-data {
+    display: flex;
+    justify-content: space-between; }
+  #content #canvas-number {
+    justify-content: center; }
+    #content #canvas-number #canvas-nr-Faktury {
+      font-size: 60px;
+      font-weight: bold;
+      text-align: center;
+      padding: 200px 0 100px 0; }
+  #content #canvas-date {
+    padding: 50px 200px 100px 100px; }
+  #content #canvas-merchant {
+    padding: 0 100px 0 100px; }
+  #content #canvas-client {
+    padding: 50px; }
+
 /*# sourceMappingURL=style.css.map */

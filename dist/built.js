@@ -7325,12 +7325,14 @@ $('.date').attr('value',today);
 }
 
 
-function Input(el,length)
+function Input(el)
 {
     this.el=el;
     this.er=0;
     this.create_node=0;
     this.inputs= document.getElementsByTagName('input');
+    this.content= document.getElementById('content');
+
 
 }
 Input.prototype.getDomElement= function()
@@ -7342,7 +7344,7 @@ Input.prototype.getDomElement= function()
 
             if(("name" in this.el.array[i]))
             {
-                console.log("plus")
+                this.canvasElement(show[j]);
             }
             if("regexp" in this.el.array[i]) {
                 this.shownumber(show[j], i, j);
@@ -7352,6 +7354,32 @@ Input.prototype.getDomElement= function()
 
         }
 
+    }
+
+};
+Input.prototype.canvasElement= function(element)
+{
+    var number= document.getElementById("canvas-number");
+    var date= document.getElementById("canvas-date");
+    var merchant= document.getElementById("canvas-merchant");
+    var client= document.getElementById("canvas-client");
+    var text= element.id.replace('-',' ');
+
+    if(element.id.indexOf("nr-Faktury")!==-1) {
+
+        this.addNode(number, element.value,element.id, "Faktura VAT nr")
+    }
+     if(element.id.indexOf("data")!==-1)
+    {
+        this.addNode(date, element.value, element.id, text)
+    }
+     if(element.id.indexOf("sprzedaw")!==-1)
+    {
+        this.addNode(merchant, element.value, element.id, text)
+    }
+     if(element.id.toLowerCase().indexOf("nabyw")!==-1)
+    {
+        this.addNode(client, element.value, element.id,text)
     }
 
 };
@@ -7539,18 +7567,18 @@ this.button.addEventListener('click',function(){
 }, false)
 
 };
-Input.prototype.addNode= function(parrent,value, id)
+Input.prototype.addNode= function(parrent,value, id, text)
 {
     var para= document.createElement("p");
 
-    var node = document.createTextNode(id+": "+value);
+    var node = document.createTextNode(text+": "+value);
 
     para.appendChild(node);
     para.setAttribute("id","canvas-"+id);
     parrent.appendChild(para);
 };
 
-var namesv= new Input({array: [{name:""},{name:""},{name:""},{name:"Postal", regexp:"\\d{2}-\\d{3}"}, {name:"NIP", regexp:"^[0-9]{10}$"},{name:"REGON", regexp:"^[0-9]{9}$"}],
+var namesv= new Input({array: [{name:"number"},{name:"date"}, {name:'Name'} ,{name:"Adress"},{name:"Postal", regexp:"\\d{2}-\\d{3}"}, {name:"NIP", regexp:"^[0-9]{10}$"},{name:"REGON", regexp:"^[0-9]{9}$"}],
     ErrorMsg:[
 
         "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"]
