@@ -1,0 +1,35 @@
+.jm
+{
+  width:100px;
+}
+#VAT-rate
+{
+  width:80px;
+}
+.services
+{
+  width: 250px;
+}
+#canvas-table
+{
+  table {
+    margin: 0 auto;
+    padding-top: 100px;
+
+    tbody {
+      th{
+
+        border: 2px solid black;
+        background-color: #D1C0B6;
+        padding: 15px;
+
+      }
+      td{
+        text-align: center;
+        border: 1px solid black;
+
+      }
+    }
+
+  }
+}

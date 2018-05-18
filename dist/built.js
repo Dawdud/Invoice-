@@ -7329,6 +7329,7 @@ function Input(el)
 {
     this.el=el;
     this.er=0;
+
     this.create_node=0;
     this.inputs= document.getElementsByTagName('input');
     this.content= document.getElementById('content');
@@ -7338,7 +7339,7 @@ function Input(el)
 Input.prototype.getDomElement= function()
 {
 
-    for(var i=0; i<this.el.array.length; i++) {
+    for(let i=0; i<this.el.array.length; i++) {
         var show = document.getElementsByClassName(this.el.array[i].name);
         for (let j = 0; j <= show.length-1; j++) {
 
@@ -7355,6 +7356,10 @@ Input.prototype.getDomElement= function()
         }
 
     }
+   for(let x=0; x<this.el.info_array.length; x++)
+   {
+       this.addNode(document.getElementById("canvas-inf"),this.el.info_array[x].value , this.el.info_array[x].name, this.el.info_array[x].name )
+   }
 
 };
 Input.prototype.canvasElement= function(element)
@@ -7363,6 +7368,7 @@ Input.prototype.canvasElement= function(element)
     var date= document.getElementById("canvas-date");
     var merchant= document.getElementById("canvas-merchant");
     var client= document.getElementById("canvas-client");
+    var sign= document.getElementById("canvas-inf");
     var text= element.id.replace('-',' ');
 
     if(element.id.indexOf("nr-Faktury")!==-1) {
@@ -7523,20 +7529,22 @@ Input.prototype.createContentTable= function()
         var trh = document.createElement('tr');
         var trd= document.createElement('tr');
         for(var j=0; j<contentbl.rows[0].cells.length; j++) {
-
-            var td=  document.createElement('td');
-            var th = document.createElement('th');
+            if(theaders[j].innerHTML!=="dodaj tabelę") {
 
 
+                var td = document.createElement('td');
+                var th = document.createElement('th');
 
-            var text1 = document.createTextNode(theaders[j].innerHTML);
-            var text2 = document.createTextNode(tdata[j].firstChild.value);
+
+                var text1 = document.createTextNode(theaders[j].innerHTML);
+                var text2 = document.createTextNode(tdata[j].firstChild.value);
 
 
-            th.appendChild(text1);
-            td.appendChild(text2);
-            trh.appendChild(th);
-            trd.appendChild(td);
+                th.appendChild(text1);
+                td.appendChild(text2);
+                trh.appendChild(th);
+                trd.appendChild(td);
+            }
         }
 
 
@@ -7544,7 +7552,7 @@ Input.prototype.createContentTable= function()
         tbody.appendChild(trd);
         table.appendChild(tbody);
     }
-    document.getElementById('content').appendChild(table);
+    document.getElementById('canvas-table').appendChild(table);
 
 };
 
@@ -7579,6 +7587,7 @@ Input.prototype.addNode= function(parrent,value, id, text)
 };
 
 var namesv= new Input({array: [{name:"number"},{name:"date"}, {name:'Name'} ,{name:"Adress"},{name:"Postal", regexp:"\\d{2}-\\d{3}"}, {name:"NIP", regexp:"^[0-9]{10}$"},{name:"REGON", regexp:"^[0-9]{9}$"}],
+    info_array:[{name:"Razem do zapłaty", value:document.getElementById('brutto-worth').value}],
     ErrorMsg:[
 
         "Przykład poprawnego użycia: 00-000","Niepoprawny NIP", "Niepoprawny REGON"]

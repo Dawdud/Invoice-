@@ -306,15 +306,6 @@ template {
 .ErrorClass {
   border: 2px solid red; }
 
-.jm {
-  width: 100px; }
-
-#VAT-rate {
-  width: 80px; }
-
-.services {
-  width: 250px; }
-
 #content {
   font-size: 30px;
   display: flex;
@@ -335,5 +326,25 @@ template {
     padding: 0 100px 0 100px; }
   #content #canvas-client {
     padding: 50px; }
+
+.jm {
+  width: 100px; }
+
+#VAT-rate {
+  width: 80px; }
+
+.services {
+  width: 250px; }
+
+#canvas-table table {
+  margin: 0 auto;
+  padding-top: 100px; }
+  #canvas-table table tbody th {
+    border: 2px solid black;
+    background-color: #D1C0B6;
+    padding: 15px; }
+  #canvas-table table tbody td {
+    text-align: center;
+    border: 1px solid black; }
 
 /*# sourceMappingURL=style.css.map */
