@@ -16,6 +16,7 @@ function demoFromHTML()
         });
     });
 
+
 }
 
 
@@ -158,35 +159,10 @@ Input.prototype.addToListNode= function(value, id)
 
 };
 
-Input.prototype.displayError= function(name, error)
-    {
-
-      //TODO this is not finished
-      name.className+='  ErrorClass';
-      document.getElementById("#content").innerHTML="";
-      var errordiv= document.createElement("div");
-      errordiv.classList.add("ErrorDiv");
-      errordiv.innerHTML="<h3>"+error+"</h3>";
 
 
-    };
-
-Input.prototype.removeElement= function()
-{
-    var edv= document.getElementsByClassName("ErrorDiv");
-
-    if(this.er>0 && edv!==undefined)
-    {
-        for(let x=0; x<edv.length; x++) {
 
 
-            edv[x].style.display = "none";
-            edv[x].parentNode.removeChild(edv[x]);
-        }
-
-    }
-
-};
 Input.prototype.calcVat=function()
     {
         var amount= document.getElementById('amount');
@@ -237,6 +213,7 @@ Input.prototype.createTable= function()
     });
 
 };
+
 Input.prototype.createContentTable= function()
 {
     var contentbl= document.getElementsByTagName('table')[0];
@@ -283,12 +260,14 @@ this.button= document.getElementById('btn');
 this.button.addEventListener('click',function(){
 
 
-    that.removeElement();
+
     that.getDomElement();
 
     that.createContentTable();
 
-    that.er=0;
+
+    demoFromHTML();
+
 
 
 

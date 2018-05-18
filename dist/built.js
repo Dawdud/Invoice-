@@ -7296,6 +7296,7 @@ function demoFromHTML()
         });
     });
 
+
 }
 
 
@@ -7339,9 +7340,9 @@ function Input(el)
 Input.prototype.getDomElement= function()
 {
 
-    for(let i=0; i<this.el.array.length; i++) {
+    for(var i=0; i<this.el.array.length; i++) {
         var show = document.getElementsByClassName(this.el.array[i].name);
-        for (let j = 0; j <= show.length-1; j++) {
+        for (var j = 0; j <= show.length-1; j++) {
 
             if(("name" in this.el.array[i]))
             {
@@ -7413,7 +7414,7 @@ Input.prototype.shownumber= function(val,i,j)
                   }
                   this.create_node++;
 
-                }
+
 
             }
 
@@ -7451,22 +7452,7 @@ Input.prototype.displayError= function(name, error)
 
     };
 
-Input.prototype.removeElement= function()
-{
-    var edv= document.getElementsByClassName("ErrorDiv");
 
-    if(this.er>0 && edv!==undefined)
-    {
-        for(let x=0; x<edv.length; x++) {
-
-
-            edv[x].style.display = "none";
-            edv[x].parentNode.removeChild(edv[x]);
-        }
-
-    }
-
-};
 Input.prototype.calcVat=function()
     {
         var amount= document.getElementById('amount');
@@ -7517,6 +7503,7 @@ Input.prototype.createTable= function()
     });
 
 };
+
 Input.prototype.createContentTable= function()
 {
     var contentbl= document.getElementsByTagName('table')[0];
@@ -7563,12 +7550,14 @@ this.button= document.getElementById('btn');
 this.button.addEventListener('click',function(){
 
 
-    that.removeElement();
+
     that.getDomElement();
 
     that.createContentTable();
 
-    that.er=0;
+
+    demoFromHTML();
+
 
 
 
