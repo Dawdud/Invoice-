@@ -35,12 +35,12 @@
     }
     #canvas-date
     {
-      padding: 50px 200px 100px 100px;
+      padding: 50px 100px 100px 100px;
     }
     #canvas-merchant
     {
 
-      padding: 0 100px 0 100px;
+      padding: 70px 150px 200px 100px;
 
 
 
@@ -49,9 +49,16 @@
     {
 
 
-      padding: 50px;
+      padding: 50px 100px 250px 100px;
     }
-
+    #canvas-inf
+    {
+      font-weight:  bold;
+      font-size: 1.2em;
+      p{
+        padding: 100px 100px 100px 100px;
+      }
+    }
 
 
 }

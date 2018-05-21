@@ -7340,9 +7340,9 @@ function Input(el)
 Input.prototype.getDomElement= function()
 {
 
-    for(var i=0; i<this.el.array.length; i++) {
+    for(let i=0; i<this.el.array.length; i++) {
         var show = document.getElementsByClassName(this.el.array[i].name);
-        for (var j = 0; j <= show.length-1; j++) {
+        for (let j = 0; j <= show.length-1; j++) {
 
             if(("name" in this.el.array[i]))
             {
@@ -7414,7 +7414,7 @@ Input.prototype.shownumber= function(val,i,j)
                   }
                   this.create_node++;
 
-
+                }
 
             }
 
@@ -7439,18 +7439,8 @@ Input.prototype.addToListNode= function(value, id)
 
 };
 
-Input.prototype.displayError= function(name, error)
-    {
-
-      //TODO this is not finished
-      name.className+='  ErrorClass';
-      document.getElementById("#content").innerHTML="";
-      var errordiv= document.createElement("div");
-      errordiv.classList.add("ErrorDiv");
-      errordiv.innerHTML="<h3>"+error+"</h3>";
 
 
-    };
 
 
 Input.prototype.calcVat=function()
