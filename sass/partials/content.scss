@@ -1,0 +1,64 @@
+#content
+{
+
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+
+
+
+    #inf-data
+    {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    #canvas-number{
+
+    justify-content: center;
+
+
+      #canvas-nr-Faktury{
+
+      font-size: 60px;
+      font-weight: bold;
+        text-align: center;
+        padding: 200px 0 100px 0;
+
+
+
+
+      }
+
+
+    }
+    #canvas-date
+    {
+      padding: 50px 100px 100px 100px;
+    }
+    #canvas-merchant
+    {
+
+      padding: 70px 150px 200px 100px;
+
+
+
+    }
+    #canvas-client
+    {
+
+
+      padding: 50px 100px 250px 100px;
+    }
+    #canvas-inf
+    {
+      font-weight:  bold;
+      font-size: 1.2em;
+      p{
+        padding: 100px 100px 100px 100px;
+      }
+    }
+
+
+}
